@@ -97,7 +97,9 @@ makeinstall_target() {
     ln -sfv $PKG_MALI_FILE $INSTALL/usr/lib/libmali.so
     ln -sfv libmali.so $INSTALL/usr/lib/libMali.so
     ln -sfv libmali.so $INSTALL/usr/lib/libEGL.so
+    ln -sfv libmali.so $INSTALL/usr/lib/libEGL.so.1
     ln -sfv libmali.so $INSTALL/usr/lib/libGLESv2.so
+    ln -sfv libmali.so $INSTALL/usr/lib/libGLESv2.so.2
     ln -sfv libmali.so $INSTALL/usr/lib/libgbm.so
 
   mkdir -p $INSTALL/usr/lib/modules-load.d
