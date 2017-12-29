@@ -19,8 +19,8 @@
 PKG_RKBIN="$(get_build_dir rkbin)"
 
 case "$UBOOT_SYSTEM" in
-  rk3288)
-    PKG_DATAFILE="spl/u-boot-spl-dtb.bin"
+  rk3036)
+    PKG_DATAFILE="spl/u-boot-spl-nodtb.bin"
     PKG_LOADER="u-boot-dtb.bin"
     ;;
   rk3328)
@@ -32,6 +32,10 @@ case "$UBOOT_SYSTEM" in
     PKG_DATAFILE="$PKG_RKBIN/rk33/rk3399_ddr_800MHz_v1.08.bin"
     PKG_LOADER="$PKG_RKBIN/rk33/rk3399_miniloader_v1.06.bin"
     PKG_BL31="$PKG_RKBIN/rk33/rk3399_bl31_v1.00.elf"
+    ;;
+  *)
+    PKG_DATAFILE="spl/u-boot-spl-dtb.bin"
+    PKG_LOADER="u-boot-dtb.bin"
     ;;
 esac
 
